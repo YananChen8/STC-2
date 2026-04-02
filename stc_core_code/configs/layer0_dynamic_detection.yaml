@@ -1,0 +1,13 @@
+# 默认配置
+cache:
+  strategy: layer0_dynamic_detection
+  update_token_ratio: 0.25
+  cache_interval: 4
+  similarity_threshold: 0.95
+
+model:
+  token_per_frame: 196
+  prune_strategy: full_tokens
+  encode_chunk_size: 1
+  ovo_fps: 1
+
