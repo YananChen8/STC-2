@@ -16,6 +16,8 @@ import transformers
 import torch
 import sys
 import argparse
+import json
+from pathlib import Path
 
 from dispider.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN, DEFAULT_ANS_TOKEN, DEFAULT_TODO_TOKEN
 from dispider.conversation import conv_templates, SeparatorStyle
@@ -30,6 +32,7 @@ from decord import VideoReader
 import numpy as np
 
 from transformers import StoppingCriteria, StoppingCriteriaList
+import torch.distributed as dist
 
 from utils.OVOBench import OVOBenchOffline
 
@@ -261,6 +264,18 @@ class EvalDispider(OVOBenchOffline):
         return outputs
 
 
+def init_distributed_if_needed():
+    world_size = int(os.environ.get("WORLD_SIZE", "1"))
+    if world_size <= 1:
+        return 0, 1, False
+
+    if not dist.is_initialized():
+        dist.init_process_group(backend="nccl", init_method="env://")
+    local_rank = int(os.environ.get("LOCAL_RANK", "0"))
+    torch.cuda.set_device(local_rank)
+    return dist.get_rank(), dist.get_world_size(), True
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-path", type=str, required=True)
@@ -269,16 +284,22 @@ if __name__ == "__main__":
     parser.add_argument("--output", type=str, default="ovo_output.json")
     args = parser.parse_args()
 
+    rank, world_size, is_distributed = init_distributed_if_needed()
+
     # 初始化模型
     evaluator = EvalDispider(args)
 
     # 读取你的 OVO 数据
-    import json
     with open(args.data_path, 'r', encoding='utf-8') as f:
         lines = f.read().splitlines()
 
+    output_path = Path(args.output)
+    rank_output_path = output_path.with_suffix(f".rank{rank}.json")
+
     results = []
-    for line in lines:
+    for sample_idx, line in enumerate(lines):
+        if sample_idx % world_size != rank:
+            continue
         if not line.strip():
             continue
         data = json.loads(line)
@@ -297,24 +318,51 @@ if __name__ == "__main__":
             prompt += opt + "\n"
         prompt += "Answer with only the letter, such as A/B/C/D:"
 
-        print("="*50)
-        print("Video:", video_path)
-        print("Question:", q)
-        print("Options:", opts)
+        print(f"[rank {rank}] " + "="*50)
+        print(f"[rank {rank}] Video:", video_path)
+        print(f"[rank {rank}] Question:", q)
+        print(f"[rank {rank}] Options:", opts)
 
         # 推理
         pred = evaluator.inference(video_path, prompt)
 
-        print("Prediction:", pred)
-        print("GT Answer:", ans)
+        print(f"[rank {rank}] Prediction:", pred)
+        print(f"[rank {rank}] GT Answer:", ans)
 
         results.append({
+            "_sample_idx": sample_idx,
             "id": data["id"],
             "question": q,
             "pred": pred,
             "gt": ans
         })
 
-    # 保存结果
-    with open(args.output, 'w', encoding='utf-8') as f:
+    # 每个 rank 先写自己的结果
+    with open(rank_output_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=2, ensure_ascii=False)
+
+    if is_distributed:
+        dist.barrier()
+
+    # 仅 rank0 合并结果
+    if rank == 0:
+        merged_results = []
+        for r in range(world_size):
+            per_rank_path = output_path.with_suffix(f".rank{r}.json")
+            if not per_rank_path.exists():
+                continue
+            with open(per_rank_path, 'r', encoding='utf-8') as f:
+                merged_results.extend(json.load(f))
+
+        merged_results.sort(key=lambda x: x["_sample_idx"])
+        for item in merged_results:
+            item.pop("_sample_idx", None)
+
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(merged_results, f, indent=2, ensure_ascii=False)
+
+        print(f"[rank 0] merged {len(merged_results)} predictions -> {output_path}")
+
+    if is_distributed:
+        dist.barrier()
+        dist.destroy_process_group()
