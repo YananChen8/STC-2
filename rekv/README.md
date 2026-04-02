@@ -188,8 +188,14 @@ TODO
 ### Run Dispider
 #### `OVO-Bench`
 ```bash
-TODO
+# 1) 先在环境变量里设置 Dispider 单卡命令（不含 anno/output 参数）
+export BASE_CMD="python dispider.py --model_path /path/to/ckpt --video_dir /path/to/chunked_videos"
+
+# 2) 运行 torchrun 多卡包装器（默认 4 卡）
+bash scripts/run_dispider_ovo_torchrun.sh 4
 ```
+
+> 说明：该脚本会自动按 rank 切分 `ovo_bench_new.json`，每个 rank 调一次原始 Dispider 单卡命令，并在 rank0 合并结果。
 ### Run LiveCC
 #### `OVO-Bench`
 ```bash
