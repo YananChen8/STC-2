@@ -1,0 +1,11 @@
+torch>=2.0.0
+transformers>=4.37.0
+tokenizers>=0.15.0
+numpy
+Pillow
+decord
+tqdm
+moviepy==1.0.3
+accelerate
+sentencepiece
+protobuf

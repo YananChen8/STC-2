@@ -1,0 +1,78 @@
+# ============================================================
+# StreamForest - Core Dependencies
+# ============================================================
+# For exact reproducible installs, use: pip install -r requirements-lock.txt
+# For flexible installs, use:           pip install -r requirements.txt
+#
+# NOTE: Install flash-attn separately after torch is installed:
+#   pip install --no-build-isolation flash-attn==2.6.3
+# ============================================================
+
+# --- Deep Learning Framework ---
+torch==2.1.2
+torchvision==0.16.2
+triton==2.1.0
+
+# --- Transformers & Model ---
+transformers==4.46.0
+tokenizers==0.20.1
+accelerate==0.29.3
+peft==0.4.0
+deepspeed==0.12.2
+bitsandbytes==0.41.0
+safetensors==0.4.5
+sentencepiece==0.1.99
+tiktoken==0.8.0
+timm==1.0.11
+open-clip-torch==2.24.0
+einops==0.6.1
+einops-exts==0.0.4
+qwen-vl-utils==0.0.8
+
+# --- Data & Datasets ---
+datasets==2.16.1
+huggingface-hub==0.29.1
+hf_transfer==0.1.6
+
+# --- Video & Image Processing ---
+av==13.1.0
+decord==0.6.0
+opencv-python-headless==4.9.0.80
+imageio==2.36.0
+pillow==10.3.0
+
+# --- Evaluation ---
+pycocoevalcap==1.2
+pycocotools==2.0.8
+sacrebleu==2.4.3
+nltk==3.8.1
+Levenshtein==0.25.1
+evaluate==0.4.1
+sqlitedict==2.1.0
+
+# --- Utilities ---
+tenacity==8.3.0
+python-dotenv==1.0.1
+pyyaml==6.0.1
+tqdm==4.66.5
+loguru==0.7.2
+rich==13.9.3
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.14.1
+scikit-learn==1.2.2
+requests==2.32.3
+jsonlines==4.0.0
+lxml==5.2.1
+ftfy==6.2.0
+regex==2024.9.11
+
+# --- Logging & Tracking ---
+wandb==0.18.5
+tensorboard==2.19.0
+
+# --- API & Web (optional, for serving) ---
+# openai==1.23.6
+# gradio==3.35.2
+# fastapi==0.110.2
+# uvicorn==0.32.0

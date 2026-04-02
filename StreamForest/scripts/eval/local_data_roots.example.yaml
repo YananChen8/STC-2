@@ -1,0 +1,22 @@
+videomme: /path/to/VideoMME/videos
+
+streamingbench:
+  _default: /path/to/local_data_root
+
+odvbench:
+  _default: /path/to/local_data_root
+
+ovobench:
+  _default: /path/to/local_data_root
+
+ovbench:
+  ava: /path/to/AVA/frames_1fps
+  tao: /path/to/tao/frames/val
+  coin: /path/to/COIN
+  hirest: /path/to/HiREST/videos
+
+mlvu_mc:
+  _default: /path/to/local_data_root
+
+mvbench:
+  _default: /path/to/local_data_root

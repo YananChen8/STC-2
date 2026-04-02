@@ -1,0 +1,43 @@
+# ============================================================
+# StreamForest - Git Ignore Rules
+# ============================================================
+
+# --- Local configuration (user-specific, do NOT commit) ---
+.env
+scripts/eval/local_data_roots.yaml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+venv/
+.venv*/
+
+# --- Logs & Outputs ---
+*.log
+eval_*.log
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Checkpoints & Large Files ---
+*.ckpt
+*.pth
+*.bin
+*.safetensors
+
+# --- HuggingFace Cache ---
+.cache/

@@ -1,0 +1,20 @@
+/wandb
+/outputs
+*.pyc
+__pycache__/
+/datasets
+*.log
+/checkpoints
+/asset
+data/tos.py
+evaluation/livesports3kcc/livecc/*/*.json
+
+# Generated benchmark data (contains local absolute paths)
+evaluation/videomme/videomme_local.jsonl
+
+# Virtual environments
+.venv*/
+.uvenv/
+
+# Evaluation results (reproducible, no need to track)
+evaluation/*/results/
