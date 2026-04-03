@@ -1044,6 +1044,16 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
     def get_decoder(self):
         return self.model
 
+    @staticmethod
+    def _index_on_tensor_device(index: torch.Tensor, tensor: torch.Tensor) -> torch.Tensor:
+        if index.device != tensor.device:
+            index = index.to(device=tensor.device)
+        return index.long()
+
+    @staticmethod
+    def _cat_on_device(tensors: List[torch.Tensor], device: torch.device) -> torch.Tensor:
+        return torch.cat([x.to(device=device) for x in tensors], dim=0)
+
     def forward_grounding_stream(
         self,
         input_ids: torch.LongTensor,
@@ -1641,8 +1651,10 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             select_memory = []
             select_clip = []
             for batch_idx in range(n_qs):
-                memory = full_memory[select_index[batch_idx]] # k k c
-                clip = clip_embeds[select_index[batch_idx]]
+                idx = self._index_on_tensor_device(select_index[batch_idx], full_memory)
+                memory = full_memory[idx] # k k c
+                clip_idx = self._index_on_tensor_device(select_index[batch_idx], clip_embeds)
+                clip = clip_embeds[clip_idx]
                 select_clip.append(clip)
                 select_memory.append(memory)
             select_memory = torch.stack(select_memory, dim=0) # q k n c
@@ -1708,7 +1720,7 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
                     new_memory = [ans_token[0], clip_memory[:i*num_per_memory]] if insert_position > 0 else [ans_token[0]]
                     new_memory.append(qs_embeds[0])
                     new_memory.append(todo_token[0])
-                    new_memory = torch.cat(new_memory, dim=0).unsqueeze(0) # 1 n+k c
+                    new_memory = self._cat_on_device(new_memory, clip_memory.device).unsqueeze(0) # 1 n+k c
                     new_mask = torch.ones_like(new_memory[:, :, 0])
                     indicator = torch.zeros_like(new_mask)
                     indicator[:, -1] = 1
@@ -1729,7 +1741,7 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
                     new_memory.append(clip_memory[memory_split[split_position[-1]]*num_per_memory: i*num_per_memory])
                     new_memory.append(qs_embeds[0])
                     new_memory.append(todo_token[0])
-                    new_memory = torch.cat(new_memory, dim=0).unsqueeze(0) # 1 n+k c
+                    new_memory = self._cat_on_device(new_memory, clip_memory.device).unsqueeze(0) # 1 n+k c
                     new_mask = torch.ones_like(new_memory[:, :, 0])
                     indicator = torch.zeros_like(new_mask)
                     indicator[:, -1] = 1
@@ -1778,8 +1790,10 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             for i, clip_idx in enumerate(full_position):
                 select_index = torch.topk(similarity[i, :clip_idx], dim=-1, k=min(4, clip_idx))[1] # k
                 select_index = select_index.sort(dim=-1)[0]
-                memory = full_memory[select_index] # k k c
-                clip = clip_embeds[select_index]
+                idx = self._index_on_tensor_device(select_index, full_memory)
+                memory = full_memory[idx] # k k c
+                clip_idx = self._index_on_tensor_device(select_index, clip_embeds)
+                clip = clip_embeds[clip_idx]
                 select_clip.append(clip)
                 select_memory.append(memory)
                 global_memory.append(final_states[2*i][global_indicators[2*i]==100])
@@ -1839,8 +1853,10 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             select_memory = []
             select_clip = []
             for batch_idx in range(n_qs):
-                memory = full_memory[select_index[batch_idx]] # k k c
-                clip = clip_embeds[select_index[batch_idx]]
+                idx = self._index_on_tensor_device(select_index[batch_idx], full_memory)
+                memory = full_memory[idx] # k k c
+                clip_idx = self._index_on_tensor_device(select_index[batch_idx], clip_embeds)
+                clip = clip_embeds[clip_idx]
                 select_clip.append(clip)
                 select_memory.append(memory)
             select_memory = torch.stack(select_memory, dim=0) # q k n c
@@ -1974,8 +1990,10 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             global_memory = []
             select_index = torch.topk(similarity[0], dim=-1, k=min(4, n_seq))[1] # k
             select_index = select_index.sort(dim=-1)[0]
-            memory = full_memory[select_index] # k k c
-            clip = clip_embeds[select_index]
+            idx = self._index_on_tensor_device(select_index, full_memory)
+            memory = full_memory[idx] # k k c
+            clip_idx = self._index_on_tensor_device(select_index, clip_embeds)
+            clip = clip_embeds[clip_idx]
             select_clip.append(clip)
             select_memory.append(memory)
             global_memory.append(final_states[0][global_indicators[0]==100])
@@ -2202,8 +2220,10 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             select_memory = []
             select_clip = []
             for batch_idx in range(n_qs):
-                memory = full_memory[select_index[batch_idx]] # k k c
-                clip = clip_embeds[select_index[batch_idx]]
+                idx = self._index_on_tensor_device(select_index[batch_idx], full_memory)
+                memory = full_memory[idx] # k k c
+                clip_idx = self._index_on_tensor_device(select_index[batch_idx], clip_embeds)
+                clip = clip_embeds[clip_idx]
                 select_clip.append(clip)
                 select_memory.append(memory)
             select_memory = torch.stack(select_memory, dim=0) # q k n c
@@ -2260,8 +2280,10 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             select_memory = []
             select_clip = []
             for batch_idx in range(n_qs):
-                memory = full_memory[select_index[batch_idx]] # k k c
-                clip = clip_embeds[select_index[batch_idx]]
+                idx = self._index_on_tensor_device(select_index[batch_idx], full_memory)
+                memory = full_memory[idx] # k k c
+                clip_idx = self._index_on_tensor_device(select_index[batch_idx], clip_embeds)
+                clip = clip_embeds[clip_idx]
                 select_clip.append(clip)
                 select_memory.append(memory)
             select_memory = torch.stack(select_memory, dim=0) # q k n c
