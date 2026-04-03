@@ -1569,7 +1569,7 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
         silent_label: Optional[torch.FloatTensor] = None,
         **kwargs,
     ) -> torch.FloatTensor:
-
+        
         if self.training and qs_embeds is None: # image only
             block_size = 1
             n_seq = inputs_embeds.shape[0]
@@ -1852,9 +1852,9 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
                 # clip memory
                 outputs = self.model(input_ids, inputs_embeds=inputs_embeds, past_key_values=past_key_values, attention_mask=attention_mask, indicators=indicators, select_layer=select_layer)
                 hidden_states = outputs[0]
-                clip_memory = hidden_states[indicators==100] # nseq*k c
+                clip_memory = hidden_states[indicators.to(hidden_states.device)==100] # nseq*k c
                 full_memory = clip_memory.view(n_seq, -1, hidden_states.shape[-1]) # nseq k c
-                full_time = hidden_states[indicators==200].view(n_seq, hidden_states.shape[-1]) # nseq c
+                full_time = hidden_states[indicators.to(hidden_states.device)==200].view(n_seq, hidden_states.shape[-1])# nseq c
 
             num_per_memory = clip_memory.shape[0] // n_seq
             num_per_time = full_time.shape[0] // n_seq

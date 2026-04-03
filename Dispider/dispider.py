@@ -278,7 +278,7 @@ def init_distributed_if_needed():
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model-path", type=str, required=True)
+    parser.add_argument("--model-path", type=str, default="/mnt/users/chenyanan-20260210/models/dispider/ckpt", required=True)
     parser.add_argument("--data-path", type=str, required=True)
     parser.add_argument("--video-root", type=str, required=True)
     parser.add_argument("--output", type=str, default="ovo_output.json")
@@ -291,19 +291,18 @@ if __name__ == "__main__":
 
     # 读取你的 OVO 数据
     with open(args.data_path, 'r', encoding='utf-8') as f:
-        lines = f.read().splitlines()
+        all_data = json.load(f)  # 直接解析成列表
 
     output_path = Path(args.output)
     rank_output_path = output_path.with_suffix(f".rank{rank}.json")
 
     results = []
-    for sample_idx, line in enumerate(lines):
+    # 遍历列表里的每一条数据
+    for sample_idx, data in enumerate(all_data):
         if sample_idx % world_size != rank:
             continue
-        if not line.strip():
-            continue
-        data = json.loads(line)
         
+        # 直接取值，不会报错
         vid = data["video"]
         q = data["question"]
         opts = data["options"]

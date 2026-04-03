@@ -5,10 +5,10 @@ set -euo pipefail
 #   bash run_ovo.sh 8 /path/to/model /path/to/ovo.jsonl /path/to/Ego4D ./ovo_results.json
 # 其中第一个参数是 GPU 数（nproc_per_node）
 
-NUM_GPUS=${1:-1}
-MODEL_PATH=${2:-/你的/Dispider模型路径}
-DATA_PATH=${3:-/你的/ovo.json路径}
-VIDEO_ROOT=${4:-/你的/Ego4D根目录}
+NUM_GPUS=${1:-4}
+MODEL_PATH=${2:-/mnt/users/chenyanan-20260210/models/dispider/ckpt}
+DATA_PATH=${3:-/mnt/users/chenyanan-20260210/ovo-bench/ovo_bench_new.json}
+VIDEO_ROOT=${4:-/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos}
 OUTPUT_PATH=${5:-./ovo_results.json}
 
 torchrun \

@@ -252,7 +252,7 @@ class videoStream():
 
 def main():
     parser = argparse.ArgumentParser(description="Run video inference.")
-    parser.add_argument('--model_path', type=str, required=True, help='Path to the model repository.')
+    parser.add_argument('--model_path', type=str, default="/mnt/users/chenyanan-20260210/models/dispider/ckpt", required=True, help='Path to the model repository.')
     parser.add_argument('--video_path', type=str, required=True, help='Path to the video file.')
     parser.add_argument('--prompt', type=str, required=True, help='Input prompt for the model.')
     parser.add_argument('--device', type=str, default='auto', choices=['auto', 'cpu', 'cuda'], help='Device to run the model on.')
