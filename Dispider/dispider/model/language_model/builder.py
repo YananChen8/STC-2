@@ -16,11 +16,21 @@ def _resolve_local_reference(base_path, candidate):
         return None
     if os.path.exists(candidate):
         return candidate
-    if not base_path or os.path.isabs(candidate):
-        return candidate
 
-    resolved = os.path.normpath(os.path.join(base_path, candidate))
-    return resolved if os.path.exists(resolved) else candidate
+    search_roots = []
+    if base_path:
+        search_roots.append(base_path)
+        search_roots.append(os.path.dirname(base_path))
+
+    normalized_candidate = candidate.lstrip('/\\')
+    candidate_basename = os.path.basename(candidate)
+    for root in search_roots:
+        for rel in (candidate, normalized_candidate, candidate_basename):
+            resolved = os.path.normpath(os.path.join(root, rel))
+            if os.path.exists(resolved):
+                return resolved
+
+    return candidate
 
 
 class QwenCompressor(nn.Module):
