@@ -1119,11 +1119,13 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
         for i in range(0, n_seq+1):
             if i < insert_position:
                 continue
+            cat_device = clip_memory.device
             if i == insert_position:
                 new_memory = [ans_token[0], clip_memory[:i*num_per_memory]] if insert_position > 0 else [ans_token[0]]
                 new_memory.append(qs_embeds[0])
                 new_memory.append(todo_token[0])
-                new_memory = self._cat_on_device(new_memory, clip_memory.device).unsqueeze(0) # 1 n+k c
+                new_memory = [x.to(device=cat_device) for x in new_memory]
+                new_memory = torch.cat(new_memory, dim=0).unsqueeze(0) # 1 n+k c
                 new_mask = torch.ones_like(new_memory[:, :, 0])
                 indicator = torch.zeros_like(new_mask)
                 indicator[:, -1] = 1
@@ -1144,7 +1146,8 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
                 new_memory.append(clip_memory[memory_split[split_position[-1]]*num_per_memory: i*num_per_memory])
                 new_memory.append(qs_embeds[0])
                 new_memory.append(todo_token[0])
-                new_memory = self._cat_on_device(new_memory, clip_memory.device).unsqueeze(0) # 1 n+k c
+                new_memory = [x.to(device=cat_device) for x in new_memory]
+                new_memory = torch.cat(new_memory, dim=0).unsqueeze(0) # 1 n+k c
                 new_mask = torch.ones_like(new_memory[:, :, 0])
                 indicator = torch.zeros_like(new_mask)
                 indicator[:, -1] = 1
@@ -1912,11 +1915,13 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
             global_embeds.append(partial_memory)
             global_masks.append(partial_mask)
             global_indicators.append(indicator)
+            cat_device = clip_memory.device
             if i == insert_position:
                 new_memory = [ans_token[0], clip_memory[:i*num_per_memory]] if insert_position > 0 else [ans_token[0]]
                 new_memory.append(qs_embeds[0])
                 new_memory.append(todo_token[0])
-                new_memory = self._cat_on_device(new_memory, clip_memory.device).unsqueeze(0) # 1 n+k c
+                new_memory = [x.to(device=cat_device) for x in new_memory]
+                new_memory = torch.cat(new_memory, dim=0).unsqueeze(0) # 1 n+k c
                 new_mask = torch.ones_like(new_memory[:, :, 0])
                 indicator = torch.zeros_like(new_mask)
                 indicator[:, -1] = 1
@@ -1937,7 +1942,8 @@ class Qwen2ForCausalLM(Qwen2PreTrainedModel):
                 new_memory.append(clip_memory[memory_split[split_position[-1]]*num_per_memory: i*num_per_memory])
                 new_memory.append(qs_embeds[0])
                 new_memory.append(todo_token[0])
-                new_memory = self._cat_on_device(new_memory, clip_memory.device).unsqueeze(0) # 1 n+k c
+                new_memory = [x.to(device=cat_device) for x in new_memory]
+                new_memory = torch.cat(new_memory, dim=0).unsqueeze(0) # 1 n+k c
                 new_mask = torch.ones_like(new_memory[:, :, 0])
                 indicator = torch.zeros_like(new_mask)
                 indicator[:, -1] = 1
