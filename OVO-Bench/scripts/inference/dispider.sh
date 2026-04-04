@@ -32,12 +32,16 @@
 set -euo pipefail
 
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export NUM_GPUS=4
+export OVO_BENCH_DIR=/home/chenyanan-20260210/STC/all/STC/OVO-Bench
 
 TASKS=("ASI" "HLD" "EPM" "ATR" "ACR" "OCR" "STU" "OJR" "FPD" "REC" "SSR" "CRR")  # 
 
 for TASK in "${TASKS[@]}"; do
   echo "===== Running task: $TASK ====="
-  python inference.py \
+  torchrun \
+    --nproc_per_node "${NUM_GPUS}" \
+    "${OVO_BENCH_DIR}/inference.py" \
     --mode offline \
     --task "$TASK" \
     --model Dispider \
