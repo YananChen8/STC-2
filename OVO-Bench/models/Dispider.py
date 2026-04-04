@@ -200,8 +200,19 @@ class EvalDispider(OVOBenchOffline):
 
         model_path = os.path.expanduser(model_path)
         model_name = get_model_name_from_path(model_path)
+        local_rank = int(os.environ.get("LOCAL_RANK", "0"))
+        if torch.cuda.is_available():
+            torch.cuda.set_device(local_rank)
+        rank_device = f"cuda:{local_rank}" if torch.cuda.is_available() else "cpu"
+        device_map = {"": rank_device}
 
-        self.tokenizer, self.model, image_processor, self.context_len = load_pretrained_model(model_path, None, model_name)
+        self.tokenizer, self.model, image_processor, self.context_len = load_pretrained_model(
+            model_path,
+            None,
+            model_name,
+            device_map=device_map,
+            device="cuda" if torch.cuda.is_available() else "cpu",
+        )
 
         self.image_processor, self.time_tokenizer = image_processor
         self.image_processor_large = self.image_processor
@@ -235,6 +246,7 @@ class EvalDispider(OVOBenchOffline):
             [StoppingCriteriaSub(stops=stop_words_ids)]
         )
 
+        print("local_rank:", local_rank)
         print("main_device:", self.main_device)
         print("vision_device:", self.vision_device)
     
