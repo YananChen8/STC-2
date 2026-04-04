@@ -126,7 +126,8 @@ class OVOBenchOffline():
         # Save Results
         if self.args.save_results:
             os.makedirs(f"{self.args.result_dir}/{self.args.model}", exist_ok=True)
-            with open(f"{self.args.result_dir}/{self.args.model}/{self.args.model}_{'_'.join(task_list)}_{mode}_1.json", "w") as f:
+            result_suffix = getattr(self.args, "result_suffix", "")
+            with open(f"{self.args.result_dir}/{self.args.model}/{self.args.model}_{'_'.join(task_list)}_{mode}_1{result_suffix}.json", "w") as f:
                 json.dump({
                     "backward": backward_results,
                     "realtime": realtime_results,
