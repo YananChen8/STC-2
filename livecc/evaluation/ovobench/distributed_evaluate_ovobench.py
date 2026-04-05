@@ -186,16 +186,56 @@ def evaluate_ovobench_results(results: list):
     if fr_accs:
         print(f'Forward Tracing avg.: {sum(fr_accs)}/{len(fr_accs)}={sum(fr_accs)/len(fr_accs)}')
 
+def enable_qwen2_5_vl_selective_recompute_cache(
+    model,
+    cache_interval: int | None = None,
+    update_token_ratio: float | None = None,
+    similarity_threshold: float | None = None,
+):
+    from qwen2_5_vl_with_cacher import register_cache_for_qwen2_5_vl
+    from stc.controller import get_config
+
+    config = get_config()
+    if cache_interval is not None:
+        config.cache.cache_interval = cache_interval
+    if update_token_ratio is not None:
+        config.cache.update_token_ratio = update_token_ratio
+    if similarity_threshold is not None:
+        config.cache.similarity_threshold = similarity_threshold
+
+    register_cache_for_qwen2_5_vl(model)
+    logger.warning(
+        "Enabled Qwen2.5-VL selective recomputation cache: "
+        f"cache_interval={config.cache.cache_interval}, "
+        f"update_token_ratio={config.cache.update_token_ratio}, "
+        f"similarity_threshold={config.cache.similarity_threshold}"
+    )
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Format OVO-Bench dataset JSONL file.")
     parser.add_argument("--benchmark_dir", type=str, required=True, help="Path to ovobench dir.")
     parser.add_argument("--model_name_or_path", type=str, required=True, help="HF model id, snapshot dir, or HF cache repo dir.")
     parser.add_argument("--output_dir", type=str, default="evaluation/ovobench/results", help="Directory to save results.")
+    parser.add_argument(
+        "--enable_selective_recompute_cache",
+        action="store_true",
+        help="Enable selective recomputation cache in qwen2_5_vl_with_cacher.py for OVO-Bench inference.",
+    )
+    parser.add_argument("--cache_interval", type=int, default=None, help="Cache chunk interval for selective recomputation.")
+    parser.add_argument("--update_token_ratio", type=float, default=None, help="Per-frame token recompute ratio.")
+    parser.add_argument("--similarity_threshold", type=float, default=None, help="Similarity threshold used by STC cacher.")
     args = parser.parse_args()
     benchmark_path = os.path.join(args.benchmark_dir, 'ovo-bench-formatted.jsonl')
 
     model_path = resolve_model_path(args.model_name_or_path)
     model = Qwen2VLForConditionalGeneration.from_pretrained(model_path, torch_dtype="auto", attn_implementation='flash_attention_2')
+    if args.enable_selective_recompute_cache:
+        enable_qwen2_5_vl_selective_recompute_cache(
+            model,
+            cache_interval=args.cache_interval,
+            update_token_ratio=args.update_token_ratio,
+            similarity_threshold=args.similarity_threshold,
+        )
     processor = AutoProcessor.from_pretrained(model_path, padding_side='left')
     options = ['No', 'Yes', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E']
     
