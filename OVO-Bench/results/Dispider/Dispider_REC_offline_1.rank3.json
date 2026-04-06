@@ -1,0 +1,1133 @@
+{
+    "backward": [],
+    "realtime": [],
+    "forward": [
+        {
+            "id": 1561,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_9200.mp4",
+            "activity": "showing something to the camera",
+            "start_times": [
+                21
+            ],
+            "end_times": [
+                26
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": "0"
+                },
+                {
+                    "realtime": 10.0,
+                    "count": 0,
+                    "response": "0"
+                },
+                {
+                    "realtime": 26,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 33,
+                    "count": 1,
+                    "response": "2"
+                },
+                {
+                    "realtime": 34.0,
+                    "count": 1,
+                    "response": "0"
+                }
+            ]
+        },
+        {
+            "id": 1565,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_5432.mp4",
+            "activity": "taking something out of something",
+            "start_times": [
+                11,
+                13,
+                14,
+                15
+            ],
+            "end_times": [
+                13,
+                14,
+                15,
+                17
+            ],
+            "test_info": [
+                {
+                    "realtime": 6,
+                    "count": 0,
+                    "response": "zero"
+                },
+                {
+                    "realtime": 13,
+                    "count": 1,
+                    "response": "2"
+                },
+                {
+                    "realtime": 14,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 15,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 17,
+                    "count": 4,
+                    "response": "2"
+                },
+                {
+                    "realtime": 27,
+                    "count": 4,
+                    "response": "eleven"
+                },
+                {
+                    "realtime": 33.0,
+                    "count": 4,
+                    "response": "eleven"
+                }
+            ]
+        },
+        {
+            "id": 1569,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_3098.mp4",
+            "activity": "showing something to the camera",
+            "start_times": [
+                1,
+                7,
+                14
+            ],
+            "end_times": [
+                4,
+                11,
+                19
+            ],
+            "test_info": [
+                {
+                    "realtime": 11,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 19,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 21.0,
+                    "count": 3,
+                    "response": "3"
+                }
+            ]
+        },
+        {
+            "id": 1573,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_7923.mp4",
+            "activity": "showing something to the camera",
+            "start_times": [
+                3,
+                9,
+                15
+            ],
+            "end_times": [
+                7,
+                14,
+                19
+            ],
+            "test_info": [
+                {
+                    "realtime": 7,
+                    "count": 1,
+                    "response": "zero"
+                },
+                {
+                    "realtime": 14,
+                    "count": 2,
+                    "response": "0"
+                },
+                {
+                    "realtime": 19,
+                    "count": 3,
+                    "response": "four"
+                },
+                {
+                    "realtime": 23.0,
+                    "count": 3,
+                    "response": "six"
+                }
+            ]
+        },
+        {
+            "id": 1577,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_8447.mp4",
+            "activity": "lifting something and placing it back down",
+            "start_times": [
+                0,
+                3,
+                5,
+                19,
+                22,
+                25
+            ],
+            "end_times": [
+                3,
+                5,
+                7,
+                22,
+                25,
+                27
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 2,
+                    "response": "3"
+                },
+                {
+                    "realtime": 7,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 10,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 22,
+                    "count": 4,
+                    "response": "0"
+                },
+                {
+                    "realtime": 25,
+                    "count": 5,
+                    "response": "eighteen"
+                },
+                {
+                    "realtime": 27,
+                    "count": 6,
+                    "response": "eighteen"
+                },
+                {
+                    "realtime": 29.0,
+                    "count": 6,
+                    "response": "eighteen"
+                }
+            ]
+        },
+        {
+            "id": 1581,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_6441.mp4",
+            "activity": "hitting something against/with something",
+            "start_times": [
+                6,
+                6,
+                7,
+                8,
+                9,
+                9
+            ],
+            "end_times": [
+                6,
+                7,
+                8,
+                9,
+                9,
+                10
+            ],
+            "test_info": [
+                {
+                    "realtime": 6,
+                    "count": 1,
+                    "response": "zero"
+                },
+                {
+                    "realtime": 7,
+                    "count": 2,
+                    "response": "zero"
+                },
+                {
+                    "realtime": 8,
+                    "count": 3,
+                    "response": "one"
+                },
+                {
+                    "realtime": 9,
+                    "count": 4,
+                    "response": "1"
+                },
+                {
+                    "realtime": 9,
+                    "count": 5,
+                    "response": "1"
+                },
+                {
+                    "realtime": 10,
+                    "count": 6,
+                    "response": "1"
+                },
+                {
+                    "realtime": 12,
+                    "count": 6,
+                    "response": "1"
+                },
+                {
+                    "realtime": 15,
+                    "count": 6,
+                    "response": ""
+                },
+                {
+                    "realtime": 22,
+                    "count": 6,
+                    "response": "zero"
+                },
+                {
+                    "realtime": 35.0,
+                    "count": 6,
+                    "response": "zero"
+                }
+            ]
+        },
+        {
+            "id": 1585,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_6933.mp4",
+            "activity": "turning something off",
+            "start_times": [
+                9
+            ],
+            "end_times": [
+                12
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": "0"
+                },
+                {
+                    "realtime": 12,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 25,
+                    "count": 1,
+                    "response": "three"
+                },
+                {
+                    "realtime": 25.0,
+                    "count": 1,
+                    "response": "three"
+                }
+            ]
+        },
+        {
+            "id": 1589,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_6746.mp4",
+            "activity": "putting something into something",
+            "start_times": [
+                2,
+                6,
+                8,
+                10,
+                12
+            ],
+            "end_times": [
+                4,
+                7,
+                9,
+                12,
+                14
+            ],
+            "test_info": [
+                {
+                    "realtime": 7,
+                    "count": 2,
+                    "response": "3"
+                },
+                {
+                    "realtime": 9,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 12,
+                    "count": 4,
+                    "response": "4"
+                },
+                {
+                    "realtime": 14,
+                    "count": 5,
+                    "response": "3"
+                },
+                {
+                    "realtime": 23,
+                    "count": 5,
+                    "response": "4"
+                },
+                {
+                    "realtime": 23.0,
+                    "count": 5,
+                    "response": "4"
+                }
+            ]
+        },
+        {
+            "id": 1593,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_9560.mp4",
+            "activity": "showing something to the camera",
+            "start_times": [
+                3,
+                11,
+                22
+            ],
+            "end_times": [
+                6,
+                17,
+                26
+            ],
+            "test_info": [
+                {
+                    "realtime": 6,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 11,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 17,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 21,
+                    "count": 2,
+                    "response": "0"
+                },
+                {
+                    "realtime": 26,
+                    "count": 3,
+                    "response": "thirteen"
+                },
+                {
+                    "realtime": 30,
+                    "count": 3,
+                    "response": "thirteen"
+                },
+                {
+                    "realtime": 31.0,
+                    "count": 3,
+                    "response": "thirteen"
+                }
+            ]
+        },
+        {
+            "id": 1597,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/perception_test/video_1892.mp4",
+            "activity": "buttoning up a button",
+            "start_times": [
+                3,
+                9,
+                12,
+                15
+            ],
+            "end_times": [
+                9,
+                12,
+                15,
+                25
+            ],
+            "test_info": [
+                {
+                    "realtime": 9,
+                    "count": 1,
+                    "response": "3"
+                },
+                {
+                    "realtime": 12,
+                    "count": 2,
+                    "response": "3"
+                },
+                {
+                    "realtime": 15,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 25,
+                    "count": 4,
+                    "response": "1"
+                },
+                {
+                    "realtime": 30,
+                    "count": 4,
+                    "response": "1"
+                },
+                {
+                    "realtime": 30.0,
+                    "count": 4,
+                    "response": "1"
+                }
+            ]
+        },
+        {
+            "id": 1601,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/video_test_0001452.mp4",
+            "activity": "volleyball spiking",
+            "start_times": [
+                7,
+                17,
+                26,
+                41,
+                54
+            ],
+            "end_times": [
+                9,
+                19,
+                28,
+                43,
+                56
+            ],
+            "test_info": [
+                {
+                    "realtime": 9,
+                    "count": 1,
+                    "response": "1"
+                },
+                {
+                    "realtime": 15,
+                    "count": 1,
+                    "response": "2"
+                },
+                {
+                    "realtime": 19,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 24,
+                    "count": 2,
+                    "response": "0"
+                },
+                {
+                    "realtime": 28,
+                    "count": 3,
+                    "response": "0"
+                },
+                {
+                    "realtime": 37,
+                    "count": 3,
+                    "response": "0"
+                },
+                {
+                    "realtime": 43,
+                    "count": 4,
+                    "response": "0"
+                },
+                {
+                    "realtime": 53,
+                    "count": 4,
+                    "response": "0"
+                },
+                {
+                    "realtime": 56,
+                    "count": 5,
+                    "response": "eleven"
+                },
+                {
+                    "realtime": 69,
+                    "count": 5,
+                    "response": "0"
+                },
+                {
+                    "realtime": 72.0,
+                    "count": 5,
+                    "response": "The event happens in fifty-one - fifty-three seconds."
+                }
+            ]
+        },
+        {
+            "id": 1605,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/thumos15_video_validation_0000238.mp4",
+            "activity": "billiards",
+            "start_times": [
+                85
+            ],
+            "end_times": [
+                92
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": ""
+                },
+                {
+                    "realtime": 42.0,
+                    "count": 0,
+                    "response": "0"
+                },
+                {
+                    "realtime": 92,
+                    "count": 1,
+                    "response": "eleven"
+                },
+                {
+                    "realtime": 93.0,
+                    "count": 1,
+                    "response": "eleven"
+                }
+            ]
+        },
+        {
+            "id": 1609,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/thumos15_video_validation_0000405.mp4",
+            "activity": "clean and jerk",
+            "start_times": [
+                1,
+                27
+            ],
+            "end_times": [
+                26,
+                113
+            ],
+            "test_info": [
+                {
+                    "realtime": 26,
+                    "count": 1,
+                    "response": "1"
+                },
+                {
+                    "realtime": 113,
+                    "count": 2,
+                    "response": "1"
+                },
+                {
+                    "realtime": 114.0,
+                    "count": 2,
+                    "response": "1"
+                }
+            ]
+        },
+        {
+            "id": 1613,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/thumos15_video_validation_0001749.mp4",
+            "activity": "soccer penalty",
+            "start_times": [
+                11,
+                17
+            ],
+            "end_times": [
+                15,
+                20
+            ],
+            "test_info": [
+                {
+                    "realtime": 15,
+                    "count": 1,
+                    "response": "1"
+                },
+                {
+                    "realtime": 20,
+                    "count": 2,
+                    "response": "1"
+                },
+                {
+                    "realtime": 21,
+                    "count": 2,
+                    "response": "1"
+                },
+                {
+                    "realtime": 31.0,
+                    "count": 2,
+                    "response": "2"
+                }
+            ]
+        },
+        {
+            "id": 1617,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/video_test_0000691.mp4",
+            "activity": "shotput",
+            "start_times": [
+                84,
+                99,
+                117,
+                156,
+                160
+            ],
+            "end_times": [
+                88,
+                105,
+                123,
+                160,
+                161
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": "one"
+                },
+                {
+                    "realtime": 42.0,
+                    "count": 0,
+                    "response": "3"
+                },
+                {
+                    "realtime": 88,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 99,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 105,
+                    "count": 2,
+                    "response": "0"
+                },
+                {
+                    "realtime": 117,
+                    "count": 2,
+                    "response": "0"
+                },
+                {
+                    "realtime": 123,
+                    "count": 3,
+                    "response": "0"
+                },
+                {
+                    "realtime": 125,
+                    "count": 3,
+                    "response": "0"
+                },
+                {
+                    "realtime": 128,
+                    "count": 3,
+                    "response": "1"
+                },
+                {
+                    "realtime": 139,
+                    "count": 3,
+                    "response": "0"
+                },
+                {
+                    "realtime": 160,
+                    "count": 4,
+                    "response": "1"
+                },
+                {
+                    "realtime": 161,
+                    "count": 5,
+                    "response": "1"
+                },
+                {
+                    "realtime": 177,
+                    "count": 5,
+                    "response": "160"
+                },
+                {
+                    "realtime": 177.0,
+                    "count": 5,
+                    "response": "160"
+                }
+            ]
+        },
+        {
+            "id": 1621,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/video_test_0001129.mp4",
+            "activity": "shotput",
+            "start_times": [
+                19,
+                41,
+                44,
+                50,
+                54,
+                61
+            ],
+            "end_times": [
+                32,
+                43,
+                45,
+                53,
+                56,
+                64
+            ],
+            "test_info": [
+                {
+                    "realtime": 18,
+                    "count": 0,
+                    "response": "0"
+                },
+                {
+                    "realtime": 32,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 32,
+                    "count": 1,
+                    "response": "0"
+                },
+                {
+                    "realtime": 43,
+                    "count": 2,
+                    "response": "0"
+                },
+                {
+                    "realtime": 45,
+                    "count": 3,
+                    "response": "2"
+                },
+                {
+                    "realtime": 48,
+                    "count": 3,
+                    "response": "3"
+                },
+                {
+                    "realtime": 53,
+                    "count": 4,
+                    "response": "3"
+                },
+                {
+                    "realtime": 56,
+                    "count": 5,
+                    "response": "3."
+                },
+                {
+                    "realtime": 60,
+                    "count": 5,
+                    "response": "3."
+                },
+                {
+                    "realtime": 64,
+                    "count": 6,
+                    "response": "five"
+                },
+                {
+                    "realtime": 67.0,
+                    "count": 6,
+                    "response": "eleven"
+                }
+            ]
+        },
+        {
+            "id": 1625,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/thumos15_video_validation_0000232.mp4",
+            "activity": "billiards",
+            "start_times": [
+                4,
+                21,
+                33,
+                45,
+                62
+            ],
+            "end_times": [
+                5,
+                22,
+                35,
+                50,
+                63
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 1,
+                    "response": "1"
+                },
+                {
+                    "realtime": 20,
+                    "count": 1,
+                    "response": "2"
+                },
+                {
+                    "realtime": 22,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 33,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 35,
+                    "count": 3,
+                    "response": "2"
+                },
+                {
+                    "realtime": 43,
+                    "count": 3,
+                    "response": "eleven"
+                },
+                {
+                    "realtime": 50,
+                    "count": 4,
+                    "response": "3"
+                },
+                {
+                    "realtime": 61,
+                    "count": 4,
+                    "response": ""
+                },
+                {
+                    "realtime": 63,
+                    "count": 5,
+                    "response": ""
+                },
+                {
+                    "realtime": 67.0,
+                    "count": 5,
+                    "response": ""
+                }
+            ]
+        },
+        {
+            "id": 1629,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/thumos15_video_validation_0000172.mp4",
+            "activity": "basketball dunk",
+            "start_times": [
+                8,
+                20,
+                35
+            ],
+            "end_times": [
+                9,
+                20,
+                36
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": "0"
+                },
+                {
+                    "realtime": 9,
+                    "count": 1,
+                    "response": "1"
+                },
+                {
+                    "realtime": 20,
+                    "count": 1,
+                    "response": "2"
+                },
+                {
+                    "realtime": 20,
+                    "count": 2,
+                    "response": "2"
+                },
+                {
+                    "realtime": 33,
+                    "count": 2,
+                    "response": "1"
+                },
+                {
+                    "realtime": 36,
+                    "count": 3,
+                    "response": "three"
+                },
+                {
+                    "realtime": 37,
+                    "count": 3,
+                    "response": "2"
+                },
+                {
+                    "realtime": 50.0,
+                    "count": 3,
+                    "response": "eleven"
+                }
+            ]
+        },
+        {
+            "id": 1633,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/video_test_0001468.mp4",
+            "activity": "clean and jerk",
+            "start_times": [
+                137,
+                144
+            ],
+            "end_times": [
+                143,
+                153
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": "3"
+                },
+                {
+                    "realtime": 68.0,
+                    "count": 0,
+                    "response": "fifty-five"
+                },
+                {
+                    "realtime": 143,
+                    "count": 1,
+                    "response": "1."
+                },
+                {
+                    "realtime": 153,
+                    "count": 2,
+                    "response": "1."
+                },
+                {
+                    "realtime": 155,
+                    "count": 2,
+                    "response": "1"
+                },
+                {
+                    "realtime": 158,
+                    "count": 2,
+                    "response": "1"
+                },
+                {
+                    "realtime": 168,
+                    "count": 2,
+                    "response": "1."
+                },
+                {
+                    "realtime": 184.0,
+                    "count": 2,
+                    "response": "1"
+                }
+            ]
+        },
+        {
+            "id": 1637,
+            "task": "REC",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/thumos/video_test_0000211.mp4",
+            "activity": "volleyball spiking",
+            "start_times": [
+                8,
+                10,
+                13,
+                17,
+                30,
+                43,
+                47,
+                50,
+                55
+            ],
+            "end_times": [
+                10,
+                12,
+                14,
+                19,
+                40,
+                44,
+                49,
+                52,
+                62
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "count": 0,
+                    "response": ""
+                },
+                {
+                    "realtime": 10,
+                    "count": 1,
+                    "response": "3"
+                },
+                {
+                    "realtime": 12,
+                    "count": 2,
+                    "response": "eleven"
+                },
+                {
+                    "realtime": 14,
+                    "count": 3,
+                    "response": ""
+                },
+                {
+                    "realtime": 19,
+                    "count": 4,
+                    "response": ""
+                },
+                {
+                    "realtime": 28,
+                    "count": 4,
+                    "response": ""
+                },
+                {
+                    "realtime": 40,
+                    "count": 5,
+                    "response": "2"
+                },
+                {
+                    "realtime": 44,
+                    "count": 6,
+                    "response": "eleven"
+                },
+                {
+                    "realtime": 49,
+                    "count": 7,
+                    "response": ""
+                },
+                {
+                    "realtime": 52,
+                    "count": 8,
+                    "response": ""
+                },
+                {
+                    "realtime": 62,
+                    "count": 9,
+                    "response": ""
+                },
+                {
+                    "realtime": 64,
+                    "count": 9,
+                    "response": "fifty-five"
+                },
+                {
+                    "realtime": 67,
+                    "count": 9,
+                    "response": ""
+                },
+                {
+                    "realtime": 80,
+                    "count": 9,
+                    "response": ""
+                },
+                {
+                    "realtime": 98.0,
+                    "count": 9,
+                    "response": "The event happens in zero - eighty-two seconds."
+                }
+            ]
+        }
+    ]
+}

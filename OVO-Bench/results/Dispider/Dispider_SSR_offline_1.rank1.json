@@ -1,0 +1,1225 @@
+{
+    "backward": [],
+    "realtime": [],
+    "forward": [
+        {
+            "id": 1517,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/9eR7x93WqA8.mp4",
+            "tutorial": "CookOmelet",
+            "all_steps": [
+                "pour the egg into the bowl",
+                "pour the egg into the pot",
+                "fry eggs",
+                "pour the egg onto the plate"
+            ],
+            "start_time": [
+                41,
+                67,
+                72,
+                102
+            ],
+            "end_time": [
+                49,
+                71,
+                93,
+                112
+            ],
+            "test_info": [
+                {
+                    "realtime": 43,
+                    "step": "pour the egg into the bowl",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 46,
+                    "step": "pour the egg into the bowl",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 49,
+                    "step": "pour the egg into the bowl",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 62,
+                    "step": "pour the egg into the pot",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 65,
+                    "step": "pour the egg into the pot",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 69,
+                    "step": "pour the egg into the pot",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 71,
+                    "step": "pour the egg into the pot",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 67,
+                    "step": "fry eggs",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 70,
+                    "step": "fry eggs",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 74,
+                    "step": "fry eggs",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 77,
+                    "step": "fry eggs",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 93,
+                    "step": "fry eggs",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 97,
+                    "step": "pour the egg onto the plate",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 100,
+                    "step": "pour the egg onto the plate",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 104,
+                    "step": "pour the egg onto the plate",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 107,
+                    "step": "pour the egg onto the plate",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 112,
+                    "step": "pour the egg onto the plate",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1521,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/RJZgFfRv17M.mp4",
+            "tutorial": "MakePickles",
+            "all_steps": [
+                "put the ingredients into the can",
+                "pour the soup in",
+                "close cans"
+            ],
+            "start_time": [
+                124,
+                149,
+                165
+            ],
+            "end_time": [
+                148,
+                160,
+                185
+            ],
+            "test_info": [
+                {
+                    "realtime": 126,
+                    "step": "put the ingredients into the can",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 129,
+                    "step": "put the ingredients into the can",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 148,
+                    "step": "put the ingredients into the can",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 144,
+                    "step": "pour the soup in",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 147,
+                    "step": "pour the soup in",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 151,
+                    "step": "pour the soup in",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 154,
+                    "step": "pour the soup in",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 160,
+                    "step": "pour the soup in",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 160,
+                    "step": "close cans",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 163,
+                    "step": "close cans",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 167,
+                    "step": "close cans",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 170,
+                    "step": "close cans",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 185,
+                    "step": "close cans",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1525,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/Vaapvds7D40.mp4",
+            "tutorial": "InstallBicycleRack",
+            "all_steps": [
+                "mount the bracket to the back of the car",
+                "place the bicycle on the bracket",
+                "fasten the strap"
+            ],
+            "start_time": [
+                22,
+                73,
+                83
+            ],
+            "end_time": [
+                34,
+                82,
+                100
+            ],
+            "test_info": [
+                {
+                    "realtime": 24,
+                    "step": "mount the bracket to the back of the car",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 27,
+                    "step": "mount the bracket to the back of the car",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 34,
+                    "step": "mount the bracket to the back of the car",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 68,
+                    "step": "place the bicycle on the bracket",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 71,
+                    "step": "place the bicycle on the bracket",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 75,
+                    "step": "place the bicycle on the bracket",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 78,
+                    "step": "place the bicycle on the bracket",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 82,
+                    "step": "place the bicycle on the bracket",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 78,
+                    "step": "fasten the strap",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 81,
+                    "step": "fasten the strap",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 85,
+                    "step": "fasten the strap",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 88,
+                    "step": "fasten the strap",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 100,
+                    "step": "fasten the strap",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1529,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/zV8ruZtvXyI.mp4",
+            "tutorial": "MakePaperWindMill",
+            "all_steps": [
+                "fold the edges of the paper",
+                "cut along the edges",
+                "fold the squares inward and fix them",
+                "fix the wind mill on the bracket"
+            ],
+            "start_time": [
+                42,
+                55,
+                88,
+                178
+            ],
+            "end_time": [
+                54,
+                69,
+                127,
+                205
+            ],
+            "test_info": [
+                {
+                    "realtime": 44,
+                    "step": "fold the edges of the paper",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 47,
+                    "step": "fold the edges of the paper",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 54,
+                    "step": "fold the edges of the paper",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 50,
+                    "step": "cut along the edges",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 53,
+                    "step": "cut along the edges",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 57,
+                    "step": "cut along the edges",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 60,
+                    "step": "cut along the edges",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 69,
+                    "step": "cut along the edges",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 83,
+                    "step": "fold the squares inward and fix them",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 86,
+                    "step": "fold the squares inward and fix them",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 90,
+                    "step": "fold the squares inward and fix them",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 93,
+                    "step": "fold the squares inward and fix them",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 127,
+                    "step": "fold the squares inward and fix them",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 173,
+                    "step": "fix the wind mill on the bracket",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 176,
+                    "step": "fix the wind mill on the bracket",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 180,
+                    "step": "fix the wind mill on the bracket",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 183,
+                    "step": "fix the wind mill on the bracket",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 205,
+                    "step": "fix the wind mill on the bracket",
+                    "type": 1,
+                    "response": "No"
+                }
+            ]
+        },
+        {
+            "id": 1533,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/BM8H9eE6jhI.mp4",
+            "tutorial": "MakeOrangeJuice",
+            "all_steps": [
+                "cut oranges",
+                "juice the oranges",
+                "pour the orange juice into the cup"
+            ],
+            "start_time": [
+                42,
+                93,
+                116
+            ],
+            "end_time": [
+                47,
+                109,
+                159
+            ],
+            "test_info": [
+                {
+                    "realtime": 44,
+                    "step": "cut oranges",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 47,
+                    "step": "cut oranges",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 88,
+                    "step": "juice the oranges",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 91,
+                    "step": "juice the oranges",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 95,
+                    "step": "juice the oranges",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 98,
+                    "step": "juice the oranges",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 109,
+                    "step": "juice the oranges",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 111,
+                    "step": "pour the orange juice into the cup",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 114,
+                    "step": "pour the orange juice into the cup",
+                    "type": 0,
+                    "response": ""
+                },
+                {
+                    "realtime": 118,
+                    "step": "pour the orange juice into the cup",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 121,
+                    "step": "pour the orange juice into the cup",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 159,
+                    "step": "pour the orange juice into the cup",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1537,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/ZhG1Woz7hZE.mp4",
+            "tutorial": "AssembleSofa",
+            "all_steps": [
+                "install legs of sofa",
+                "put every parts mentioned together",
+                "put on sofa cover"
+            ],
+            "start_time": [
+                0,
+                15,
+                161
+            ],
+            "end_time": [
+                10,
+                137,
+                194
+            ],
+            "test_info": [
+                {
+                    "realtime": 5,
+                    "step": "install legs of sofa",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 10,
+                    "step": "install legs of sofa",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 10,
+                    "step": "put every parts mentioned together",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 13,
+                    "step": "put every parts mentioned together",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 17,
+                    "step": "put every parts mentioned together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 20,
+                    "step": "put every parts mentioned together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 137,
+                    "step": "put every parts mentioned together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 156,
+                    "step": "put on sofa cover",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 159,
+                    "step": "put on sofa cover",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 163,
+                    "step": "put on sofa cover",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 166,
+                    "step": "put on sofa cover",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 194,
+                    "step": "put on sofa cover",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1541,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/QInuE1KwCZM.mp4",
+            "tutorial": "ReplaceFilterForAirPurifier",
+            "all_steps": [
+                "take out the shell",
+                "take out the filter",
+                "fit on the filter",
+                "fit on the shell"
+            ],
+            "start_time": [
+                4,
+                22,
+                59,
+                87
+            ],
+            "end_time": [
+                11,
+                51,
+                86,
+                99
+            ],
+            "test_info": [
+                {
+                    "realtime": 6,
+                    "step": "take out the shell",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 9,
+                    "step": "take out the shell",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 11,
+                    "step": "take out the shell",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 17,
+                    "step": "take out the filter",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 20,
+                    "step": "take out the filter",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 24,
+                    "step": "take out the filter",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 27,
+                    "step": "take out the filter",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 51,
+                    "step": "take out the filter",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 54,
+                    "step": "fit on the filter",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 57,
+                    "step": "fit on the filter",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 61,
+                    "step": "fit on the filter",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 64,
+                    "step": "fit on the filter",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 86,
+                    "step": "fit on the filter",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 82,
+                    "step": "fit on the shell",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 85,
+                    "step": "fit on the shell",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 89,
+                    "step": "fit on the shell",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 92,
+                    "step": "fit on the shell",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 99,
+                    "step": "fit on the shell",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1545,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/va1W1yeLVWI.mp4",
+            "tutorial": "InstallShowerHead",
+            "all_steps": [
+                "replace the old shower head",
+                "wrap the pipe band",
+                "install the new shower head"
+            ],
+            "start_time": [
+                38,
+                105,
+                127
+            ],
+            "end_time": [
+                44,
+                126,
+                193
+            ],
+            "test_info": [
+                {
+                    "realtime": 40,
+                    "step": "replace the old shower head",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 43,
+                    "step": "replace the old shower head",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 44,
+                    "step": "replace the old shower head",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 100,
+                    "step": "wrap the pipe band",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 103,
+                    "step": "wrap the pipe band",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 107,
+                    "step": "wrap the pipe band",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 110,
+                    "step": "wrap the pipe band",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 126,
+                    "step": "wrap the pipe band",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 122,
+                    "step": "install the new shower head",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 125,
+                    "step": "install the new shower head",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 129,
+                    "step": "install the new shower head",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 132,
+                    "step": "install the new shower head",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 193,
+                    "step": "install the new shower head",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1549,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/iPhI5xRvJHM.mp4",
+            "tutorial": "WrapZongzi",
+            "all_steps": [
+                "add ingredients into cone",
+                "fold the leaves",
+                "tie the zongzi tightly"
+            ],
+            "start_time": [
+                100,
+                138,
+                144
+            ],
+            "end_time": [
+                137,
+                142,
+                155
+            ],
+            "test_info": [
+                {
+                    "realtime": 102,
+                    "step": "add ingredients into cone",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 105,
+                    "step": "add ingredients into cone",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 137,
+                    "step": "add ingredients into cone",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 133,
+                    "step": "fold the leaves",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 136,
+                    "step": "fold the leaves",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 140,
+                    "step": "fold the leaves",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 142,
+                    "step": "fold the leaves",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 139,
+                    "step": "tie the zongzi tightly",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 142,
+                    "step": "tie the zongzi tightly",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 146,
+                    "step": "tie the zongzi tightly",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 149,
+                    "step": "tie the zongzi tightly",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 155,
+                    "step": "tie the zongzi tightly",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1553,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/5OSRrZ15R1E.mp4",
+            "tutorial": "MakeCandle",
+            "all_steps": [
+                "melt the wax with water",
+                "put the candle wick into a vessel",
+                "pour the wax into the vessel",
+                "wait for the candle until concretion"
+            ],
+            "start_time": [
+                98,
+                119,
+                133,
+                176
+            ],
+            "end_time": [
+                118,
+                132,
+                175,
+                185
+            ],
+            "test_info": [
+                {
+                    "realtime": 100,
+                    "step": "melt the wax with water",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 103,
+                    "step": "melt the wax with water",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 118,
+                    "step": "melt the wax with water",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 114,
+                    "step": "put the candle wick into a vessel",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 117,
+                    "step": "put the candle wick into a vessel",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 121,
+                    "step": "put the candle wick into a vessel",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 124,
+                    "step": "put the candle wick into a vessel",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 132,
+                    "step": "put the candle wick into a vessel",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 128,
+                    "step": "pour the wax into the vessel",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 131,
+                    "step": "pour the wax into the vessel",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 135,
+                    "step": "pour the wax into the vessel",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 138,
+                    "step": "pour the wax into the vessel",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 175,
+                    "step": "pour the wax into the vessel",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 171,
+                    "step": "wait for the candle until concretion",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 174,
+                    "step": "wait for the candle until concretion",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 178,
+                    "step": "wait for the candle until concretion",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 181,
+                    "step": "wait for the candle until concretion",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 185,
+                    "step": "wait for the candle until concretion",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1557,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/N_qj_iSrF64.mp4",
+            "tutorial": "RemoveBlackheadsWithGlue",
+            "all_steps": [
+                "pour some glue to the face",
+                "wipe the glue to a layer",
+                "reveal the glue from the face"
+            ],
+            "start_time": [
+                51,
+                82,
+                108
+            ],
+            "end_time": [
+                81,
+                107,
+                135
+            ],
+            "test_info": [
+                {
+                    "realtime": 53,
+                    "step": "pour some glue to the face",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 56,
+                    "step": "pour some glue to the face",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 81,
+                    "step": "pour some glue to the face",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 77,
+                    "step": "wipe the glue to a layer",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 80,
+                    "step": "wipe the glue to a layer",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 84,
+                    "step": "wipe the glue to a layer",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 87,
+                    "step": "wipe the glue to a layer",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 107,
+                    "step": "wipe the glue to a layer",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 103,
+                    "step": "reveal the glue from the face",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 106,
+                    "step": "reveal the glue from the face",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 110,
+                    "step": "reveal the glue from the face",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 113,
+                    "step": "reveal the glue from the face",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 135,
+                    "step": "reveal the glue from the face",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        }
+    ]
+}

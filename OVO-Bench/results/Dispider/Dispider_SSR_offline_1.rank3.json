@@ -1,0 +1,1202 @@
+{
+    "backward": [],
+    "realtime": [],
+    "forward": [
+        {
+            "id": 1519,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/Th3xK0rAJB8.mp4",
+            "tutorial": "MakeSugarCoatedHaws",
+            "all_steps": [
+                "string the fruit together",
+                "melt the sugar",
+                "soak sugar gourd in sugar"
+            ],
+            "start_time": [
+                44,
+                82,
+                111
+            ],
+            "end_time": [
+                67,
+                106,
+                131
+            ],
+            "test_info": [
+                {
+                    "realtime": 46,
+                    "step": "string the fruit together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 49,
+                    "step": "string the fruit together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 67,
+                    "step": "string the fruit together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 77,
+                    "step": "melt the sugar",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 80,
+                    "step": "melt the sugar",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 84,
+                    "step": "melt the sugar",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 87,
+                    "step": "melt the sugar",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 106,
+                    "step": "melt the sugar",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 106,
+                    "step": "soak sugar gourd in sugar",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 109,
+                    "step": "soak sugar gourd in sugar",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 113,
+                    "step": "soak sugar gourd in sugar",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 116,
+                    "step": "soak sugar gourd in sugar",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 131,
+                    "step": "soak sugar gourd in sugar",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1523,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/FbSLCfEiZHE.mp4",
+            "tutorial": "MakeYoutiao",
+            "all_steps": [
+                "stir raw materials",
+                "knead together",
+                "flatten the dough",
+                "cut into strips"
+            ],
+            "start_time": [
+                7,
+                24,
+                103,
+                150
+            ],
+            "end_time": [
+                23,
+                53,
+                135,
+                157
+            ],
+            "test_info": [
+                {
+                    "realtime": 9,
+                    "step": "stir raw materials",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 12,
+                    "step": "stir raw materials",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 23,
+                    "step": "stir raw materials",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 19,
+                    "step": "knead together",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 22,
+                    "step": "knead together",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 26,
+                    "step": "knead together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 29,
+                    "step": "knead together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 53,
+                    "step": "knead together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 98,
+                    "step": "flatten the dough",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 101,
+                    "step": "flatten the dough",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 105,
+                    "step": "flatten the dough",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 108,
+                    "step": "flatten the dough",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 135,
+                    "step": "flatten the dough",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 145,
+                    "step": "cut into strips",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 148,
+                    "step": "cut into strips",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 152,
+                    "step": "cut into strips",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 155,
+                    "step": "cut into strips",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 157,
+                    "step": "cut into strips",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1527,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/MDI_R2sIZDk.mp4",
+            "tutorial": "MakePaperDice",
+            "all_steps": [
+                "fold or bent paper",
+                "put paper together",
+                "paint on the paper"
+            ],
+            "start_time": [
+                20,
+                145,
+                288
+            ],
+            "end_time": [
+                129,
+                271,
+                323
+            ],
+            "test_info": [
+                {
+                    "realtime": 22,
+                    "step": "fold or bent paper",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 25,
+                    "step": "fold or bent paper",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 129,
+                    "step": "fold or bent paper",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 140,
+                    "step": "put paper together",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 143,
+                    "step": "put paper together",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 147,
+                    "step": "put paper together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 150,
+                    "step": "put paper together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 271,
+                    "step": "put paper together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 283,
+                    "step": "paint on the paper",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 286,
+                    "step": "paint on the paper",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 290,
+                    "step": "paint on the paper",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 293,
+                    "step": "paint on the paper",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 323,
+                    "step": "paint on the paper",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1531,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/WGuwhJzcvSg.mp4",
+            "tutorial": "DoLinoPrinting",
+            "all_steps": [
+                "scrape tarpaulin without ink",
+                "ink the marked area",
+                "transfer print"
+            ],
+            "start_time": [
+                20,
+                108,
+                113
+            ],
+            "end_time": [
+                90,
+                112,
+                129
+            ],
+            "test_info": [
+                {
+                    "realtime": 22,
+                    "step": "scrape tarpaulin without ink",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 25,
+                    "step": "scrape tarpaulin without ink",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 90,
+                    "step": "scrape tarpaulin without ink",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 103,
+                    "step": "ink the marked area",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 106,
+                    "step": "ink the marked area",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 110,
+                    "step": "ink the marked area",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 112,
+                    "step": "ink the marked area",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 108,
+                    "step": "transfer print",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 111,
+                    "step": "transfer print",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 115,
+                    "step": "transfer print",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 118,
+                    "step": "transfer print",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 129,
+                    "step": "transfer print",
+                    "type": 1,
+                    "response": "yes"
+                }
+            ]
+        },
+        {
+            "id": 1535,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/XAYewYkAr-M.mp4",
+            "tutorial": "AssembleBed",
+            "all_steps": [
+                "place the board on each side",
+                "place the bed board",
+                "place mattress on the bed"
+            ],
+            "start_time": [
+                40,
+                203,
+                213
+            ],
+            "end_time": [
+                114,
+                211,
+                224
+            ],
+            "test_info": [
+                {
+                    "realtime": 42,
+                    "step": "place the board on each side",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 45,
+                    "step": "place the board on each side",
+                    "type": 1,
+                    "response": ""
+                },
+                {
+                    "realtime": 114,
+                    "step": "place the board on each side",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 198,
+                    "step": "place the bed board",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 201,
+                    "step": "place the bed board",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 205,
+                    "step": "place the bed board",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 208,
+                    "step": "place the bed board",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 211,
+                    "step": "place the bed board",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 208,
+                    "step": "place mattress on the bed",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 211,
+                    "step": "place mattress on the bed",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 215,
+                    "step": "place mattress on the bed",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 218,
+                    "step": "place mattress on the bed",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 224,
+                    "step": "place mattress on the bed",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1539,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/0R-MCN4gHT4.mp4",
+            "tutorial": "MakeBed",
+            "all_steps": [
+                "put the sheet on the bed",
+                "insert the pillow into the pillow cover",
+                "put the pillow on the bed"
+            ],
+            "start_time": [
+                2,
+                182,
+                220
+            ],
+            "end_time": [
+                181,
+                219,
+                233
+            ],
+            "test_info": [
+                {
+                    "realtime": 7,
+                    "step": "put the sheet on the bed",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 181,
+                    "step": "put the sheet on the bed",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 177,
+                    "step": "insert the pillow into the pillow cover",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 180,
+                    "step": "insert the pillow into the pillow cover",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 184,
+                    "step": "insert the pillow into the pillow cover",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 187,
+                    "step": "insert the pillow into the pillow cover",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 219,
+                    "step": "insert the pillow into the pillow cover",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 215,
+                    "step": "put the pillow on the bed",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 218,
+                    "step": "put the pillow on the bed",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 222,
+                    "step": "put the pillow on the bed",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 225,
+                    "step": "put the pillow on the bed",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 233,
+                    "step": "put the pillow on the bed",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1543,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/RmiuR14GDsI.mp4",
+            "tutorial": "PutOnQuiltCover",
+            "all_steps": [
+                "put nicely and align the quilt and the cover",
+                "roll the quilt cover and the quilt together",
+                "take out the quilt cover from another side",
+                "put and arrange nicely"
+            ],
+            "start_time": [
+                11,
+                32,
+                79,
+                121
+            ],
+            "end_time": [
+                24,
+                78,
+                114,
+                211
+            ],
+            "test_info": [
+                {
+                    "realtime": 13,
+                    "step": "put nicely and align the quilt and the cover",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 16,
+                    "step": "put nicely and align the quilt and the cover",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 24,
+                    "step": "put nicely and align the quilt and the cover",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 27,
+                    "step": "roll the quilt cover and the quilt together",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 30,
+                    "step": "roll the quilt cover and the quilt together",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 34,
+                    "step": "roll the quilt cover and the quilt together",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 37,
+                    "step": "roll the quilt cover and the quilt together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 78,
+                    "step": "roll the quilt cover and the quilt together",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 74,
+                    "step": "take out the quilt cover from another side",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 77,
+                    "step": "take out the quilt cover from another side",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 81,
+                    "step": "take out the quilt cover from another side",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 84,
+                    "step": "take out the quilt cover from another side",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 114,
+                    "step": "take out the quilt cover from another side",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 116,
+                    "step": "put and arrange nicely",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 119,
+                    "step": "put and arrange nicely",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 123,
+                    "step": "put and arrange nicely",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 126,
+                    "step": "put and arrange nicely",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 211,
+                    "step": "put and arrange nicely",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1547,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/Hf2AisK1wHY.mp4",
+            "tutorial": "ChangeBikeTires",
+            "all_steps": [
+                "unload the wheel",
+                "remove the tire",
+                "load the inner tube",
+                "load the tire",
+                "load the wheel",
+                "pump up the tire"
+            ],
+            "start_time": [
+                34,
+                66,
+                106,
+                118,
+                136,
+                168
+            ],
+            "end_time": [
+                64,
+                102,
+                112,
+                134,
+                166,
+                208
+            ],
+            "test_info": [
+                {
+                    "realtime": 36,
+                    "step": "unload the wheel",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 39,
+                    "step": "unload the wheel",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 64,
+                    "step": "unload the wheel",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 61,
+                    "step": "remove the tire",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 64,
+                    "step": "remove the tire",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 68,
+                    "step": "remove the tire",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 71,
+                    "step": "remove the tire",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 102,
+                    "step": "remove the tire",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 101,
+                    "step": "load the inner tube",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 104,
+                    "step": "load the inner tube",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 108,
+                    "step": "load the inner tube",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 111,
+                    "step": "load the inner tube",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 112,
+                    "step": "load the inner tube",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 113,
+                    "step": "load the tire",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 116,
+                    "step": "load the tire",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 120,
+                    "step": "load the tire",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 123,
+                    "step": "load the tire",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 134,
+                    "step": "load the tire",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 131,
+                    "step": "load the wheel",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 134,
+                    "step": "load the wheel",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 138,
+                    "step": "load the wheel",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 141,
+                    "step": "load the wheel",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 166,
+                    "step": "load the wheel",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 163,
+                    "step": "pump up the tire",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 166,
+                    "step": "pump up the tire",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 170,
+                    "step": "pump up the tire",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 173,
+                    "step": "pump up the tire",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 208,
+                    "step": "pump up the tire",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1551,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/2uKIUxlomWg.mp4",
+            "tutorial": "AssembleOfficeChair",
+            "all_steps": [
+                "install the wheels for the base",
+                "assemble the cushion and the backrest",
+                "connect the chair and the base"
+            ],
+            "start_time": [
+                15,
+                51,
+                194
+            ],
+            "end_time": [
+                38,
+                194,
+                201
+            ],
+            "test_info": [
+                {
+                    "realtime": 17,
+                    "step": "install the wheels for the base",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 20,
+                    "step": "install the wheels for the base",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 38,
+                    "step": "install the wheels for the base",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 46,
+                    "step": "assemble the cushion and the backrest",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 49,
+                    "step": "assemble the cushion and the backrest",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 53,
+                    "step": "assemble the cushion and the backrest",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 56,
+                    "step": "assemble the cushion and the backrest",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 194,
+                    "step": "assemble the cushion and the backrest",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 189,
+                    "step": "connect the chair and the base",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 192,
+                    "step": "connect the chair and the base",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 196,
+                    "step": "connect the chair and the base",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 199,
+                    "step": "connect the chair and the base",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 201,
+                    "step": "connect the chair and the base",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        },
+        {
+            "id": 1555,
+            "task": "SSR",
+            "video": "/mnt/users/chenyanan-20260210/ovo-bench/src_videos/src_videos/COIN/KlLCIDY3I8g.mp4",
+            "tutorial": "Sow",
+            "all_steps": [
+                "prepare the soil carefully",
+                "sow on the soil",
+                "cover with some soil",
+                "apply a cover on the soil"
+            ],
+            "start_time": [
+                22,
+                53,
+                96,
+                188
+            ],
+            "end_time": [
+                48,
+                94,
+                118,
+                209
+            ],
+            "test_info": [
+                {
+                    "realtime": 24,
+                    "step": "prepare the soil carefully",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 27,
+                    "step": "prepare the soil carefully",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 48,
+                    "step": "prepare the soil carefully",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 48,
+                    "step": "sow on the soil",
+                    "type": 0,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 51,
+                    "step": "sow on the soil",
+                    "type": 0,
+                    "response": "No"
+                },
+                {
+                    "realtime": 55,
+                    "step": "sow on the soil",
+                    "type": 1,
+                    "response": "No"
+                },
+                {
+                    "realtime": 58,
+                    "step": "sow on the soil",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 94,
+                    "step": "sow on the soil",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 91,
+                    "step": "cover with some soil",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 94,
+                    "step": "cover with some soil",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 98,
+                    "step": "cover with some soil",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 101,
+                    "step": "cover with some soil",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 118,
+                    "step": "cover with some soil",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 183,
+                    "step": "apply a cover on the soil",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 186,
+                    "step": "apply a cover on the soil",
+                    "type": 0,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 190,
+                    "step": "apply a cover on the soil",
+                    "type": 1,
+                    "response": "yes"
+                },
+                {
+                    "realtime": 193,
+                    "step": "apply a cover on the soil",
+                    "type": 1,
+                    "response": "Yes"
+                },
+                {
+                    "realtime": 209,
+                    "step": "apply a cover on the soil",
+                    "type": 1,
+                    "response": "Yes"
+                }
+            ]
+        }
+    ]
+}

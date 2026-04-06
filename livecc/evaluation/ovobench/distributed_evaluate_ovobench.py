@@ -193,7 +193,7 @@ def enable_qwen2_5_vl_selective_recompute_cache(
     similarity_threshold: float | None = None,
 ):
     from qwen2_5_vl_with_cacher import register_cache_for_qwen2_5_vl
-    from stc.controller import get_config
+    from controller import get_config
 
     config = get_config()
     if cache_interval is not None:

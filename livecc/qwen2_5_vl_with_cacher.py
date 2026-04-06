@@ -21,8 +21,8 @@ from typing import Optional, Tuple, List
 import types
 import os
 
-from stc.vit_with_cacher.utils import STC_CACHER
-from stc.controller import get_config
+from utils.utils import STC_CACHER
+from controller import get_config
 
 
 def register_cache_for_qwen2_5_vl(model: nn.Module) -> None:

@@ -35,7 +35,7 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export NUM_GPUS=4
 export OVO_BENCH_DIR=/home/chenyanan-20260210/STC/all/STC/OVO-Bench
 
-TASKS=("ASI" "HLD" "EPM" "ATR" "ACR" "OCR" "STU" "OJR" "FPD" "REC" "SSR" "CRR")  # 
+TASKS=("CRR")  # "ASI" "HLD" "EPM" "ATR" "ACR" "OCR" "STU" "OJR" "FPD" "REC" "SSR" 
 
 for TASK in "${TASKS[@]}"; do
   echo "===== Running task: $TASK ====="
