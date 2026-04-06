@@ -83,7 +83,7 @@ def qwen2_5_vl_visual_forward_with_cache(
     self,
     hidden_states: torch.Tensor,
     grid_thw: torch.Tensor,
-) -> torch.Tensor:
+) -> object:
     """
     Cached forward for Qwen2.5VL vision encoder with streaming simulation.
     
@@ -96,7 +96,7 @@ def qwen2_5_vl_visual_forward_with_cache(
         grid_thw: Grid dimensions [num_videos, 3] (time, height, width)
         
     Returns:
-        Merged visual features after processing
+        A vision-model-like output object containing `pooler_output`.
     """
     # IMPORTANT: First apply patch embedding to convert pixel values to patches
     # This is the step that was missing before!
@@ -159,7 +159,13 @@ def qwen2_5_vl_visual_forward_with_cache(
     # Apply the merger (spatial merging)
     output = self.merger(output)
     
-    return output
+    # HF Qwen2-VL `get_video_features()` expects `self.visual(...)` to return
+    # an object with `.pooler_output`. Returning a raw Tensor breaks that path.
+    # Keep parity with the expected contract while preserving our cached tensor.
+    return types.SimpleNamespace(
+        pooler_output=output,
+        last_hidden_state=output,
+    )
 
 
 def _process_video_with_streaming_cache(

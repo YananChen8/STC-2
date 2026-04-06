@@ -12,6 +12,41 @@ from qwen_vl_utils import process_vision_info
 
 logger = logging.get_logger(__name__)
 
+
+class ReducedLogitsMCQTrainer(Trainer):
+    """Reduce per-step logits to option ids before cross-process padding/gather."""
+
+    def __init__(self, *args, strict_option_ids: list[int], **kwargs):
+        super().__init__(*args, **kwargs)
+        self.strict_option_ids = strict_option_ids
+
+    def prediction_step(self, model, inputs, prediction_loss_only, ignore_keys=None):
+        loss, logits, labels = super().prediction_step(
+            model, inputs, prediction_loss_only=False, ignore_keys=ignore_keys
+        )
+
+        if logits is None:
+            return loss, logits, labels
+        if isinstance(logits, (tuple, list)):
+            logits = logits[0]
+        elif isinstance(logits, dict):
+            logits = logits.get("logits")
+
+        if logits is None or logits.ndim < 3:
+            return loss, logits, labels
+
+        attention_mask = inputs.get("attention_mask")
+        if attention_mask is None:
+            last_pos = torch.full(
+                (logits.shape[0],), logits.shape[1] - 1, device=logits.device, dtype=torch.long
+            )
+        else:
+            last_pos = (attention_mask.long().sum(dim=1) - 1).clamp(min=0)
+
+        batch_idx = torch.arange(logits.shape[0], device=logits.device)
+        reduced_logits = logits[batch_idx, last_pos][:, self.strict_option_ids].argmax(dim=-1).to(torch.int64)
+        return loss, reduced_logits, labels
+
 class MCQDataset(Dataset):
     def __init__(self, remote_loader, path, question_prefix, question_postfix, answer_prefix, with_subtitles: bool = False, sample: int = None):
         lines = open(path).readlines()
@@ -69,9 +104,6 @@ class MCQDataset(Dataset):
         )
         return inputs
 
-def preprocess_logits_for_metrics(logits, labels, strict_letter_ids): 
-    return torch.stack([logit[(logit[:, 0] != -100).nonzero().squeeze()[-1], strict_letter_ids] for logit in logits]).argmax(dim=-1)
-
 def mcq_predict(
     model, 
     processor, 
@@ -89,8 +121,9 @@ def mcq_predict(
 ):
     strict_letter_ids = [processor.tokenizer(f'{abcd_previous_str}{_}').input_ids[-1] for _ in letters] 
     dataset = MCQDataset(remote_loader, benchmark_path, question_prefix=question_prefix, question_postfix=question_postfix, answer_prefix=answer_prefix, with_subtitles=with_subtitles)
-    trainer = Trainer(
+    trainer = ReducedLogitsMCQTrainer(
         model=model, 
+        strict_option_ids=strict_letter_ids,
         args=TrainingArguments(
             output_dir='outputs/', do_predict=True, 
             per_device_eval_batch_size=per_device_eval_batch_size, 
@@ -99,7 +132,6 @@ def mcq_predict(
         ), 
         data_collator=functools.partial(dataset.data_collator, processor=processor),
         processing_class=processor,
-        preprocess_logits_for_metrics=functools.partial(preprocess_logits_for_metrics, strict_letter_ids=strict_letter_ids),
     )
     letter_idxs_predictions = trainer.predict(dataset, ignore_keys=['past_key_values', 'hidden_states', 'attentions', 'rope_deltas']).predictions
     return letter_idxs_predictions, dataset.datums, trainer.args.process_index
