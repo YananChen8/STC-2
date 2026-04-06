@@ -187,13 +187,13 @@ def evaluate_ovobench_results(results: list):
     if fr_accs:
         print(f'Forward Tracing avg.: {sum(fr_accs)}/{len(fr_accs)}={sum(fr_accs)/len(fr_accs)}')
 
-def enable_qwen2_5_vl_selective_recompute_cache(
+def enable_qwen2_vl_selective_recompute_cache(
     model,
     cache_interval: int | None = None,
     update_token_ratio: float | None = None,
     similarity_threshold: float | None = None,
 ):
-    from qwen2_5_vl_with_cacher import register_cache_for_qwen2_5_vl
+    from qwen_vl_with_cacher import register_cache_for_qwen2_vl
     from controller import get_config
 
     config = get_config()
@@ -206,9 +206,9 @@ def enable_qwen2_5_vl_selective_recompute_cache(
         cache_config = replace(cache_config, similarity_threshold=similarity_threshold)
     config.cache = cache_config
 
-    register_cache_for_qwen2_5_vl(model)
+    register_cache_for_qwen2_vl(model)
     logger.warning(
-        "Enabled Qwen2.5-VL selective recomputation cache: "
+        "Enabled Qwen2-VL selective recomputation cache: "
         f"cache_interval={config.cache.cache_interval}, "
         f"update_token_ratio={config.cache.update_token_ratio}, "
         f"similarity_threshold={config.cache.similarity_threshold}"
@@ -222,7 +222,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--enable_selective_recompute_cache",
         action="store_true",
-        help="Enable selective recomputation cache in qwen2_5_vl_with_cacher.py for OVO-Bench inference.",
+        help="Enable selective recomputation cache in qwen_vl_with_cacher.py for OVO-Bench inference.",
     )
     parser.add_argument("--cache_interval", type=int, default=None, help="Cache chunk interval for selective recomputation.")
     parser.add_argument("--update_token_ratio", type=float, default=None, help="Per-frame token recompute ratio.")
@@ -233,7 +233,7 @@ if __name__ == '__main__':
     model_path = resolve_model_path(args.model_name_or_path)
     model = Qwen2VLForConditionalGeneration.from_pretrained(model_path, torch_dtype="auto", attn_implementation='flash_attention_2')
     if args.enable_selective_recompute_cache:
-        enable_qwen2_5_vl_selective_recompute_cache(
+        enable_qwen2_vl_selective_recompute_cache(
             model,
             cache_interval=args.cache_interval,
             update_token_ratio=args.update_token_ratio,
