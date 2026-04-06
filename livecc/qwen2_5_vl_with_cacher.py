@@ -25,6 +25,33 @@ from utils.utils import STC_CACHER
 from controller import get_config
 
 
+def _resolve_visual_model(model: nn.Module) -> nn.Module:
+    """
+    Resolve Qwen-VL vision tower across different HF versions/model wrappers.
+    """
+    candidates = [
+        ("model.visual", lambda m: m.model.visual),
+        ("visual", lambda m: m.visual),
+        ("model.vision_tower", lambda m: m.model.vision_tower),
+        ("vision_tower", lambda m: m.vision_tower),
+    ]
+    for _, getter in candidates:
+        try:
+            visual_model = getter(model)
+            if visual_model is not None:
+                return visual_model
+        except AttributeError:
+            continue
+
+    available_top_level = [name for name in ("model", "visual", "vision_tower") if hasattr(model, name)]
+    nested_model = getattr(model, "model", None)
+    available_nested = [name for name in ("visual", "vision_tower") if nested_model is not None and hasattr(nested_model, name)]
+    raise AttributeError(
+        "Cannot find Qwen-VL vision module. Tried: model.visual, visual, model.vision_tower, vision_tower. "
+        f"Top-level attrs: {available_top_level}, nested model attrs: {available_nested}"
+    )
+
+
 def register_cache_for_qwen2_5_vl(model: nn.Module) -> None:
     """
     Register STC caching mechanism for Qwen2.5VL vision encoder.
@@ -35,7 +62,7 @@ def register_cache_for_qwen2_5_vl(model: nn.Module) -> None:
     Args:
         model: The Qwen2_5_VLForConditionalGeneration model
     """
-    visual_model = model.model.visual
+    visual_model = _resolve_visual_model(model)
     
     # Store original forward
     visual_model._original_forward = visual_model.forward
@@ -507,7 +534,7 @@ def unregister_cache_for_qwen2_5_vl(model: nn.Module) -> None:
     Remove STC caching from Qwen2.5VL vision encoder.
     Restores original forward methods.
     """
-    visual_model = model.model.visual
+    visual_model = _resolve_visual_model(model)
     
     if hasattr(visual_model, '_original_forward'):
         visual_model.forward = visual_model._original_forward
