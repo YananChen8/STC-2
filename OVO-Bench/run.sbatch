@@ -27,6 +27,6 @@ conda activate /mnt/users/chenyanan-20260210/conda/envs/dispider
 cd /home/chenyanan-20260210/STC/all/STC/OVO-Bench
 
 # 执行正式运行的命令（替换成你调试好的完整命令）
-bash scripts/inference/dispider.sh
-# bash scripts/score/dispider.sh
+# bash scripts/inference/dispider.sh
+bash scripts/score/dispider.sh
 # bash scripts/ovobench_scipts/score_rekv.sh
