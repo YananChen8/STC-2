@@ -1,4 +1,5 @@
 import json, os, torch, functools, tqdm, random, sys, argparse
+from dataclasses import replace
 import numpy as np
 import decord
 from torch.utils.data import Dataset
@@ -196,12 +197,14 @@ def enable_qwen2_5_vl_selective_recompute_cache(
     from controller import get_config
 
     config = get_config()
+    cache_config = config.cache
     if cache_interval is not None:
-        config.cache.cache_interval = cache_interval
+        cache_config = replace(cache_config, cache_interval=cache_interval)
     if update_token_ratio is not None:
-        config.cache.update_token_ratio = update_token_ratio
+        cache_config = replace(cache_config, update_token_ratio=update_token_ratio)
     if similarity_threshold is not None:
-        config.cache.similarity_threshold = similarity_threshold
+        cache_config = replace(cache_config, similarity_threshold=similarity_threshold)
+    config.cache = cache_config
 
     register_cache_for_qwen2_5_vl(model)
     logger.warning(
